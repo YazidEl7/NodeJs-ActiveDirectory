@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f9ff; /* Light blue background */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #007bff; /* Blue headings */
+    text-align: center; /* Center align h1 and h2 */
+}
+
+button {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+    margin: 4%;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+form#searchForm {
+    max-width: 300px; /* Adjust search form width */
+    margin: 0 auto; /* Center align search form */
+}
+
+#logoutButton {
+    float: right; /* Move logoutButton to the right */
+    margin-right: 2%;
+}
+
+#groupActionForm {
+    text-align: center; /* Center align groupActionForm */
+    margin-top: 20px; /* Add space above groupActionForm */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Center align tables and add space */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    width: 90%;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #e5f1ff; /* Light blue table header */
+}
+
+div.clear {
+    clear: both; /* Clear float */
+    width: 40%; /* Set width to 40% */
+    margin: 20px auto; /* Center align and add space */
+    border-top: 1px solid #ccc; /* Add border */
+}

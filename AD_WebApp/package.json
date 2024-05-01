@@ -1,0 +1,17 @@
+{
+  "name": "myp",
+  "version": "1.0.0",
+  "description": "manipulate AD user attributes",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yaz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "ldapjs": "^3.0.7"
+  }
+}
