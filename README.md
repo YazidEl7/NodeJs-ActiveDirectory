@@ -34,13 +34,20 @@ Once Node.js is installed, you can proceed with the initial configuration, setti
 
 ### Usage Example
 - You use the credentials of one of the security group members to authenticate.
+  
 ![comp-info](/assets/images/1-login.jpg)
+
 - After a successful authentication, the table shown in the screenshot below will appear. This table is the result of running the Query.ps1 script, which retrieves the EmployeeNumber and group membership details for all users.
 - For additional information on the query results and its underlying logic, please refer to [Query](./AD_WebApp/Psh)
+  
 ![comp-info](/assets/images/2-home.jpg)
+
 - To perform modification actions on a user or to locate a user, please utilize the SAMAccountName in the search box as depicted below. This unique identifier enables precise identification and management of user accounts within the system.
+  
 ![comp-info](/assets/images/3-query.jpg)
-When searching for a specific user, you have the option to execute actions such as adding or removing them from groups, in addition to providing their token for authentication.
+
+- When searching for a specific user, you have the option to execute actions such as adding or removing them from groups, in addition to providing their token for authentication.
+  
 ![comp-info](/assets/images/4-addtogroup.jpg)
 
 ## License
