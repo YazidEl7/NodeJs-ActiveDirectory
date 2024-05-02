@@ -1,0 +1,12 @@
+<#> Powershell Active directory module
+Install-Module ActiveDirectory
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+Install-Module ActiveDirectory
+Install-WindowsFeature RSAT-AD-PowerShell
+Add-WindowsFeature RSAT-AD-PowerShell
+Install-WindowsFeature RSAT-AD-PowerShell
+Install-Module ActiveDirectory
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+Install-WindowsFeature RSAT-AD-PowerShelll
+DISM.exe /Online /Add-Capability /CapabilityName:Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
+</#>
