@@ -25,6 +25,7 @@ A Windows Server 2019 which will require the following configuration :
 - You'll need to update the domain name in the files to match your own domain, as well as modify the names of groups or users to align with your specific environment.
 - I haven't used HTTPs.
 - Change the secret Key.
+- Change the Group's DN and domain to yours.
   
 ### Installation
 Back to the windows 10 :
@@ -33,7 +34,7 @@ Once Node.js is installed, you can proceed with the initial configuration, setti
 - I used the following dependencies; "body-parser": "^1.20.2","express": "^4.19.2","express-session": "^1.18.0","ldapjs": "^3.0.7".
 
 ### Usage Example
-- You use the credentials of one of the security group members to authenticate.
+- You use the credentials of one of the security group members to authenticate, other users won't be able to.
   
 ![comp-info](/assets/images/1-login.jpg)
 
