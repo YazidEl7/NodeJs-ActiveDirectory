@@ -51,15 +51,35 @@ function authenticateUser(username, password, callback) {
                 }
                 return;
             }
-            // Unbind and close LDAP client connection
-            client.unbind(() => {
-                callback(null, true); // Authentication successful
+
+            // Check if the user is a member of the specified group
+            client.search(ldapConfig.baseDN, { filter: `(&(userPrincipalName=${username})(memberOf=CN=FortiAD2,OU=Utilisateurs,DC=dom,DC=local))`, scope: 'sub' }, (searchErr, searchRes) => {
+                if (searchErr) {
+                    callback(searchErr);
+                    return;
+                }
+
+                let isMember = false;
+                searchRes.on('searchEntry', (entry) => {
+                    isMember = true;
+                });
+                searchRes.on('end', () => {
+                    // Unbind and close LDAP client connection
+                    client.unbind(() => {
+                        if (isMember) {
+                            callback(null, true); // Authentication successful
+                        } else {
+                            callback(new Error('User is not a member of the required group'));
+                        }
+                    });
+                });
             });
         });
     } catch (error) {
         callback(error); // Handle client creation errors
     }
 }
+// R
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'login.html'));
