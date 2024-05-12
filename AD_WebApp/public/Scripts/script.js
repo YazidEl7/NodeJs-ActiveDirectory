@@ -1,3 +1,20 @@
+// Function to get the connected user's username
+async function getLoggedInUser() {
+    try {
+        const response = await fetch('/check-authentication');
+        const data = await response.json();
+        const username = data.username; // Assuming the server returns the username in the response
+
+        // Display the username
+        document.getElementById('loggedInUser').textContent = 'Logged in as: ' + username;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Call the function to get the logged-in user when the page loads
+getLoggedInUser();
+
 // Function to check if user is authenticated
         async function checkAuthentication() {
             try {
@@ -147,7 +164,7 @@
                             body: JSON.stringify({ samAccountName: samAccountName, group, action, token })
                         });
                         const result = await response.json();
-
+			console.log(result);
                         // Display action result
                         document.getElementById('resultContainer').innerHTML += `
                             <h2>Action Result:</h2>

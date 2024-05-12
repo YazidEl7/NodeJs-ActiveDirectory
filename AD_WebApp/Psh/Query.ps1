@@ -1,5 +1,8 @@
-﻿# Get users who are members of FortitokenHard or Fortitokenmobile groups within the specified search base
-$users = Get-ADUser -Filter * -SearchBase "OU=Utilisateurs,DC=dom,DC=local" -Properties MemberOf, EmployeeNumber | 
+﻿# OU=Utilisateurs,DC=dom,DC=local
+#CN=FortitokenHard
+#CN=Fortitokenmobile
+# Get users who are members of FortitokenHard or Fortitokenmobile groups within the specified search base
+$users = Get-ADUser -Filter * -SearchBase "OU=Utilisateurs,DC=dom,DC=local" -Properties MemberOf, EmployeeNumber |
     Where-Object {
         $_.MemberOf -match "CN=FortitokenHard" -or $_.MemberOf -match "CN=Fortitokenmobile"
     }

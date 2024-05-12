@@ -11,6 +11,18 @@ body {
     padding: 20px;
 }
 
+.logo-container {
+    text-align: center; /* Center align the logo */
+    margin-top: 20px; /* Add top margin */
+}
+
+.logo {
+    width: 75px; /* Set the width of the logo */
+    height: 75px; /* Set the height of the logo */
+    border-radius: 20%; /* Make it circular */
+    margin-bottom: 20px; /* Add bottom margin */
+}
+
 h1, h2 {
     color: #007bff; /* Blue headings */
     text-align: center; /* Center align h1 and h2 */
@@ -31,20 +43,166 @@ button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
-form#searchForm {
-    max-width: 300px; /* Adjust search form width */
-    margin: 0 auto; /* Center align search form */
+
+
+#searchForm {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+}
+
+#searchForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    width: 200px; /* Set a fixed width for the label */
+    text-align: right; /* Align label text to the right */
+    margin-right: 10px; /* Add some space between the label and input */
+    line-height: 34px; /* Set line height equal to input height for vertical alignment */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+#samAccountName {
+    flex: 1; /* Grow to fill available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+}
+
+#searchButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+
+
+#loggedInUser {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin-right: 2%;
+    float: right;
 }
 
 #logoutButton {
     float: right; /* Move logoutButton to the right */
     margin-right: 2%;
+    margin-top: 0%;
 }
 
-#groupActionForm {
-    text-align: center; /* Center align groupActionForm */
-    margin-top: 20px; /* Add space above groupActionForm */
+/* Styling for the resultContainer2 */
+#resultContainer2 {
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
+    margin-top: 20px; /* Add some top margin */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
+
+/* Style for the JSON output */
+    #resultContainer pre {
+        background-color: #f9f9f9;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        padding: 20px;
+        overflow-x: auto; /* Enable horizontal scroll if needed */
+        font-family: 'Arial', sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #333;
+    }
+
+
+/* Styling for the groupActionForm */
+#groupActionForm {
+    max-width: 400px; /* Adjust the maximum width */
+    margin: 0 auto; /* Center align */
+}
+
+/* Styling for the form labels */
+#groupActionForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Styling for the select dropdowns */
+#groupActionForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Styling for the token input */
+#tokenInput {
+    margin-bottom: 20px;
+}
+
+/* Styling for the token input label */
+#tokenInput label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Styling for the token input field */
+#tokenInput input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Styling for the submit button */
+#groupActionForm button[type="submit"] {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+#groupActionForm button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
 
 table {
     width: 100%;

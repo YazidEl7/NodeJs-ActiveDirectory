@@ -1,8 +1,10 @@
 # search.ps1
 param([string]$samAccountName)
 
-# Execute Get-ADUser command
-$user = Get-ADUser -Identity $samAccountName -Properties EmployeeNumber, MemberOf, UserPrincipalName
+
+
+    $user = Get-ADUser -Identity $samAccountName -Properties EmployeeNumber, MemberOf, UserPrincipalName
+
 
 $o = @()
 $user.MemberOf | ForEach-Object {$o += (Get-ADGroup -Identity $_).name}
