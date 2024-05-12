@@ -31,7 +31,15 @@ A Windows Server 2019 which will require the following configuration :
 Back to the windows 10 :
 - To install Node.js, visit the official Node.js website (https://nodejs.org/) and download the appropriate installer for your operating system. Follow the installation instructions provided on the website.
 Once Node.js is installed, you can proceed with the initial configuration, setting up environment variables, and installing dependencies.
-- I used the following dependencies; "body-parser": "^1.20.2","express": "^4.19.2","express-session": "^1.18.0","ldapjs": "^3.0.7".
+- I used the following dependencies;   "dependencies": {
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.0.1",
+    "ldapjs": "^3.0.7"
+  }
 
 ### Usage Example
 - You use the credentials of one of the security group members to authenticate, other users won't be able to.
