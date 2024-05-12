@@ -41,7 +41,7 @@ Once Node.js is installed, you can proceed with the initial configuration, setti
     "ldapjs": "^3.0.7"
   }
 
-### Usage Example
+### Usage Example (There has been a little UI update, the below screenshots are older)
 - You use the credentials of one of the security group members to authenticate, other users won't be able to.
   
 ![comp-info](/assets/images/1-login.jpg)
