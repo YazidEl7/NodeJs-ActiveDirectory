@@ -109,11 +109,10 @@ app.post('/login', (req, res) => {
 app.get('/check-authentication', (req, res) => {
     if (req.session.username && req.session.password) {
         // User is authenticated
-        res.sendStatus(200);
+        res.status(200).json({ authenticated: true, username: req.session.username });
     } else {
         // User is not authenticated
-        res.redirect('/');
-
+        res.status(401).json({ authenticated: false });
     }
 });
 
