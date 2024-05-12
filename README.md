@@ -25,7 +25,7 @@ A Windows Server 2019 which will require the following configuration :
 - You'll need to update the domain name in the files to match your own domain, as well as modify the names of groups or users to align with your specific environment.
 - I haven't used HTTPs.
 - Change the secret Key.
-- Change the Group's DN and domain to yours.
+- Change the Group's DN and domain to yours (I used a .env for the secret key).
   
 ### Installation
 Back to the windows 10 :
