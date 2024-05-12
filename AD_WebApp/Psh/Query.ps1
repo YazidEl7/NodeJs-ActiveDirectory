@@ -14,6 +14,9 @@ foreach ($user in $users) {
     # Determine which group the user belongs to
     if ($user.MemberOf -match "CN=FortitokenHard") {
         $memberOf = "FortitokenHard"
+        if ($user.MemberOf -match "CN=Fortitokenmobile") {
+        $memberOf = $memberOf + ", Fortitokenmobile"
+        }
     } elseif ($user.MemberOf -match "CN=Fortitokenmobile") {
         $memberOf = "Fortitokenmobile"
     }
